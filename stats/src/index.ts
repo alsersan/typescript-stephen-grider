@@ -16,7 +16,7 @@ enum MatchResult {
 let manUnitedWins = 0;
 
 matches.forEach((match: string[]) => {
-  if (match[1] === 'Man United' && match[5] === MatchResult.Draw) {
+  if (match[1] === 'Man United' && match[5] === MatchResult.HomeWin) {
     manUnitedWins++;
   } else if (match[2] === 'Man United' && match[5] === MatchResult.AwayWin) {
     manUnitedWins++;
