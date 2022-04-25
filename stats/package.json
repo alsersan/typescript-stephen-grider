@@ -8,5 +8,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.27",
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.15"
+  }
 }
