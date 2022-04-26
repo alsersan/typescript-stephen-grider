@@ -1,6 +1,6 @@
 import { CsvFileReader } from './composition/CsvFileReaderComposition';
 import { MatchReader } from './composition/MatchReaderComposition';
-import { MatchResult } from './MatchResult';
+import { MatchResult } from './models/MatchResult';
 
 // INHERITANCE APPROACH
 /* const reader = new MatchReader('football.csv');

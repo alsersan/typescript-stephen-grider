@@ -1,7 +1,7 @@
 import { CsvFileReader } from './CsvFileReaderInheritance';
-import { MatchResult } from '../MatchResult';
+import { MatchResult } from '../models/MatchResult';
 import { dateStringToDate } from '../utils';
-import { MatchData } from '../MatchData';
+import { MatchData } from '../models/MatchData';
 
 export class MatchReader extends CsvFileReader<MatchData> {
   constructor(public filename: string) {
