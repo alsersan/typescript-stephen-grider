@@ -3,6 +3,7 @@ import { CsvFileReader } from './composition/CsvFileReaderComposition';
 import { MatchReader } from './composition/MatchReaderComposition';
 import { MatchResult } from './models/MatchResult';
 import { ConsoleReport } from './reporters/ConsoleReport';
+import { HtmlReport } from './reporters/HtmlReport';
 import { Summary } from './Summary';
 
 // INHERITANCE APPROACH (OLD)
@@ -19,13 +20,13 @@ reader.data.forEach((match) => {
   }
 }); */
 
-// COMPOSITION APPROACH
+// COMPOSITION APPROACH (NEW)
 const reader = new CsvFileReader('football.csv');
 const matchReader = new MatchReader(reader);
 matchReader.load();
 
 const analyzer = new WinsAnalysis('Man United');
-const reporter = new ConsoleReport();
+const reporter = new HtmlReport();
 const summary = new Summary(analyzer, reporter);
 
 summary.buildAndPrintReport(matchReader.matches);
