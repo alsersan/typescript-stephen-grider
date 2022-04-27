@@ -1,3 +1,3 @@
-export interface Reporter {
+export interface OutputTarget {
   print(report: string): void;
 }
