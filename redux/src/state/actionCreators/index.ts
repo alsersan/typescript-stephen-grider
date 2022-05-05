@@ -1,8 +1,12 @@
-import { Dispatch } from 'redux';
+import { AnyAction, Dispatch } from 'redux';
+import { ThunkAction } from 'redux-thunk';
 import { Action } from '../actions';
 import { ActionTypes } from '../actionTypes';
+import { RootState } from '../reducers';
 
-export const searchRepositories = (term: string) => {
+export const searchRepositories = (
+  term: string
+): ThunkAction<Promise<void>, RootState, unknown, AnyAction> => {
   return async (dispatch: Dispatch<Action>) => {
     dispatch({ type: ActionTypes.SEARCH_REPOSITORIES });
 
